@@ -42,11 +42,7 @@ public abstract class Pokemon {
     }
 
     public void setHitPoints(int hitPoints) {
-        if (hitPoints < 0) {
-            throw new IllegalArgumentException("Pokemon hit points may not be negative!");
-        }
-
-        this.hitPoints = hitPoints;
+        this.hitPoints = Math.max(hitPoints, 0);
     }
 
     public void gainExperiencePoints(int experiencePoints) {
