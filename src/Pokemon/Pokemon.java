@@ -1,3 +1,5 @@
+package Pokemon;
+
 public abstract class Pokemon {
     private static final int MAX_NAME_LENGTH = 32;
 

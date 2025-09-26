@@ -1,6 +1,10 @@
+import Pokemon.Electric.*;
+import Pokemon.Fire.*;
+
 public class Main {
     public static void main(String[] args) {
         electricPokemonDemo();
+        firePokemonDemo();
     }
 
     private static void electricPokemonDemo() {
@@ -20,5 +24,18 @@ public class Main {
         pikachu.lightningBolt();
 
         System.out.println(pikachu);
+    }
+
+    private static void firePokemonDemo() {
+        var pokemon = new FirePokemon("Charmander", 1000, 0, 500, 0.2);
+        System.out.println(pokemon);
+
+        pokemon.adjustFlameTemperatureForClimate(Climate.SUNNY);
+        pokemon.flamethrower();
+
+        pokemon.adjustFlameTemperatureForClimate(Climate.SNOWY);
+        pokemon.flamethrower();
+
+        System.out.println(pokemon);
     }
 }

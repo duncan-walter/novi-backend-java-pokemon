@@ -1,3 +1,7 @@
+package Pokemon.Electric;
+
+import Pokemon.Pokemon;
+
 public class ElectricPokemon extends Pokemon {
     private final int OVERCHARGE_THRESHOLD = getLevel() * 250;
     private final int CHARGE_AMOUNT = getLevel() * 75;
