@@ -1,10 +1,12 @@
 import Pokemon.Electric.*;
 import Pokemon.Fire.*;
+import Pokemon.Grass.*;
 
 public class Main {
     public static void main(String[] args) {
         electricPokemonDemo();
         firePokemonDemo();
+        grassPokemonDemo();
     }
 
     private static void electricPokemonDemo() {
@@ -35,6 +37,24 @@ public class Main {
 
         pokemon.adjustFlameTemperatureForClimate(Climate.SNOWY);
         pokemon.flamethrower();
+
+        System.out.println(pokemon);
+    }
+
+    private static void grassPokemonDemo() {
+        var pokemon = new GrassPokemon("Bulbasaur", 1000, 500, 15, 5);
+        System.out.println(pokemon);
+
+        pokemon.seedClusterBomb(10);
+        pokemon.seedClusterBomb(5);
+        pokemon.seedClusterBomb(5);
+
+        System.out.println(pokemon);
+
+        pokemon.heal();
+        System.out.printf("%s finds some seeds!%n", pokemon.getName());
+        pokemon.setSeedCount(10);
+        pokemon.heal();
 
         System.out.println(pokemon);
     }
