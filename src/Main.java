@@ -1,12 +1,14 @@
 import Pokemon.Electric.*;
 import Pokemon.Fire.*;
 import Pokemon.Grass.*;
+import Pokemon.Water.WaterPokemon;
 
 public class Main {
     public static void main(String[] args) {
         electricPokemonDemo();
         firePokemonDemo();
         grassPokemonDemo();
+        waterPokemonDemo();
     }
 
     private static void electricPokemonDemo() {
@@ -55,6 +57,24 @@ public class Main {
         System.out.printf("%s finds some seeds!%n", pokemon.getName());
         pokemon.setSeedCount(10);
         pokemon.heal();
+
+        System.out.println(pokemon);
+    }
+
+    private static void waterPokemonDemo() {
+        var pokemon = new WaterPokemon("Squirtle", 1000, 100, 100, 10, 500);
+        System.out.println(pokemon);
+
+        pokemon.healingRain();
+        pokemon.healingRain();
+
+        System.out.printf("%s jumps into a pool of water!%n", pokemon.getName());
+        pokemon.absorbWater(1000);
+
+        System.out.println(pokemon);
+
+        pokemon.hydroPump();
+        pokemon.hydroPump();
 
         System.out.println(pokemon);
     }
