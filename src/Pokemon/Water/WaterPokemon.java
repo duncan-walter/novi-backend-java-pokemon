@@ -81,4 +81,9 @@ public class WaterPokemon extends Pokemon {
                 getWaterPressure()
         );
     }
+
+    @Override
+    public void makeSound() {
+        System.out.println("Blub blub blub!");
+    }
 }

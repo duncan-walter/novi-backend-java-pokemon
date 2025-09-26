@@ -69,4 +69,9 @@ public class GrassPokemon extends Pokemon {
                 getPoisonLevel()
         );
     }
+
+    @Override
+    public void makeSound() {
+        System.out.printf("%1$s %1$s %1$s!%n", getName());
+    }
 }

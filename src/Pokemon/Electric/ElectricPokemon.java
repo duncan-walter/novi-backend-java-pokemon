@@ -90,4 +90,9 @@ public class ElectricPokemon extends Pokemon {
                 getLastAttackUsed()
         );
     }
+
+    @Override
+    public void makeSound() {
+        System.out.println("*Guitar riff* 'You've been... THUNDERSTRUCK!'");
+    }
 }

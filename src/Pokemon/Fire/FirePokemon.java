@@ -87,4 +87,9 @@ public class FirePokemon extends Pokemon {
                 getBurnChance() * 100
         );
     }
+
+    @Override
+    public void makeSound() {
+        System.out.printf("%1$s %1$s!%n", getName());
+    }
 }

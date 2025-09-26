@@ -62,4 +62,6 @@ public abstract class Pokemon {
     public int getLevel() {
         return experiencePoints / 100 + 1;
     }
+
+    public abstract void makeSound();
 }
